@@ -1,41 +1,37 @@
-📄 DocuQuery AI
-An intelligent PDF document assistant that lets you upload PDFs and query them in natural language.
-Powered by LangChain, Hugging Face Transformers, FAISS vector store, and a Gradio interface, this project uses Retrieval-Augmented Generation (RAG) to deliver accurate, context-aware answers.
+# DocuQuery_AI
 
-🚀 Features
-PDF Upload – Supports single or multiple PDF uploads.
+**DocuQuery_AI** is an intelligent document assistant that allows users to upload PDFs and query them using natural language.  
+Built using **LangChain**, **Hugging Face Transformers**, **FAISS** vector store, and **Gradio**, this project implements **Retrieval-Augmented Generation (RAG)** to extract relevant information from PDFs and deliver precise, context-aware answers.
 
-Natural Language Query – Ask questions as if talking to a person.
+---
 
-Retrieval-Augmented Generation (RAG) – Fetches only the most relevant chunks for precise answers.
+## 🚀 Features
+- 📄 **Upload PDFs** — Easily add your own documents.
+- 💬 **Ask in Natural Language** — Query without worrying about keywords.
+- 🎯 **Accurate Retrieval** — Uses FAISS for efficient similarity search.
+- 🤖 **AI-Powered Answers** — Large Language Models provide context-aware responses.
+- 🌐 **Interactive Web UI** — Powered by Gradio for ease of use.
 
-Gradio Interface – Clean, interactive UI for seamless use.
+---
 
-Local or Cloud Models – Works with Hugging Face or OpenAI LLMs.
+## 🛠️ Tech Stack
+- **LangChain** — Orchestrates document loading, text splitting, embeddings, and retrieval.
+- **Hugging Face Transformers** — LLMs for generating answers.
+- **FAISS** — Vector database for efficient similarity search.
+- **Gradio** — Simple, interactive web-based UI.
+- **PyMuPDF / pdfplumber** — For extracting text from PDFs.
 
-🛠 Tech Stack
-LangChain – For chaining LLM calls and retrieval pipelines.
+---
 
-Hugging Face Transformers – For running language models.
+## ⚙️ How It Works
+1. **Upload PDF** — The system reads and processes your file.
+2. **Chunk & Embed** — Text is split into small chunks and converted into embeddings using a Hugging Face model.
+3. **Store in FAISS** — Embeddings are stored in a FAISS vector store for fast retrieval.
+4. **Query** — User’s question is embedded and compared with stored chunks to find relevant ones.
+5. **Generate Answer** — Relevant chunks are passed to the LLM to produce a precise, context-aware answer.
+6. **Display in Gradio** — The answer is shown on the web interface.
 
-FAISS – For fast and efficient vector similarity search.
+---
 
-PyPDF2 / pdfplumber – For PDF text extraction.
-
-Gradio – For building the web interface.
-
-⚙️ How It Works
-Upload PDFs → The system extracts text and splits it into manageable chunks.
-
-Vectorization → Chunks are converted into embeddings using a Hugging Face embedding model.
-
-Indexing → FAISS stores these embeddings for quick retrieval.
-
-Querying → When a user asks a question, FAISS finds the most relevant chunks.
-
-Generation → The selected chunks are passed to the LLM to generate an accurate answer.
-
-Response → Gradio displays the result in the web interface.
-
-Sample output->
+## Sample output->
 <img width="732" height="408" alt="image" src="https://github.com/user-attachments/assets/b98c54a4-605c-46a6-9835-ffaea14bd5b0" />
